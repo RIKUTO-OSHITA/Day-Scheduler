@@ -23,16 +23,16 @@
       <section class="workspace">
         <aside class="task-editor">
           <h2>タスク入力</h2>
-          <p class="helper">開始時刻は 15 分刻みです。範囲は 07:30-18:00 に正規化されます。タイムラインをクリックすると開始時刻が自動入力されます。</p>
+          <p class="helper">開始時刻と終了時刻は 07:30-18:00 のプルダウンから選択します。入力値は 15 分刻みに正規化されます。</p>
           <form id="task-form">
             <label for="task-title">タイトル</label>
             <input id="task-title" type="text" required maxlength="60" placeholder="例: 顧客MTG" />
 
             <label for="task-start">開始時刻</label>
-            <input id="task-start" type="time" required step="900" min="07:30" max="18:00" />
+            <select id="task-start" required></select>
 
-            <label for="task-duration">時間（分）</label>
-            <input id="task-duration" type="number" min="15" step="15" value="30" required />
+            <label for="task-end">終了時刻</label>
+            <select id="task-end" required></select>
 
             <div class="actions">
               <button type="submit">保存</button>
